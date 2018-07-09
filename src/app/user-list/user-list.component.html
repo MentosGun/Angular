@@ -1,0 +1,13 @@
+<h2>Users: </h2>
+<input type="text" [value]="filter" (input)="filter = filterUsers($event)">
+<ul>
+  <li *ngIf="users === null">
+      Loading...
+  </li>
+  <li *ngIf="users !== null && users.length === 0">
+    No user.
+  </li>
+  <li *ngFor="let user of users">
+    <app-card-user [user]="user"></app-card-user>
+  </li>
+</ul>

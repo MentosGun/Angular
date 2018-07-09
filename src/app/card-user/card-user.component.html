@@ -1,0 +1,16 @@
+<a [routerLink]="['/user', user.id]">
+    <h3>{{ user.username }}</h3>
+</a>
+
+<dl *ngIf="user.firstName">
+    <dt>First Name</dt>
+    <dd>{{ user.firstName }}</dd>
+</dl>
+<dl *ngIf="user.lastName">
+    <dt>Last Name</dt>
+    <dd>{{ user.lastName }}</dd>
+</dl>
+<dl *ngIf="user.birthdayDate">
+    <dt>Birth Date</dt>
+    <dd>{{ user.birthdayDate | date }}</dd>
+</dl>
